@@ -13,16 +13,13 @@ What Sanya doesn't know is that the mole could be a sign of skin cancer, but wit
 
 Solution with Skindom:
 
-Visual & Textual Explanation: Rohan uploads a picture of his acne to the Skindom platform. The deep learning AI scans the image and identifies the type of acne, providing an easy-to-understand explanation about the condition, including its likely cause (in this case, fungal acne triggered by an antibiotic course). The platform generates a detailed report, highlighting the possible triggers, severity, and recommended steps for treatment.
+1. Visual & Textual Explanation: Rohan uploads a picture of his acne to the Skindom platform. The deep learning AI scans the image and identifies the type of acne, providing an easy-to-understand explanation about the condition, including its likely cause (in this case, fungal acne triggered by an antibiotic course). The platform generates a detailed report, highlighting the possible triggers, severity, and recommended steps for treatment.
 
-Quality Check & Human Feedback: Before Rohan receives the explanation, the AI-generated report undergoes a quality check. The explanation is reviewed by a network of dermatologists and medical professionals who verify its accuracy. Any necessary adjustments or clarifications are made based on their feedback, ensuring the information is reliable.
 
-Knowledge Sharing & Contribution: After understanding his condition, Rohan decides to contribute to the platform. He participates by annotating images of his own skin condition, helping other users gain a better understanding of similar issues. By contributing, Rohan feels empowered, knowing his input helps improve the platform's accuracy for others.
+2. Rating Medical Explanations: Once Rohan has reviewed his personalized report, he provides feedback on its clarity, usefulness, and accuracy. His rating helps the platform continually refine its algorithms, ensuring that future explanations are even more helpful and tailored to individual users.
 
-Rating Medical Explanations: Once Rohan has reviewed his personalized report, he provides feedback on its clarity, usefulness, and accuracy. His rating helps the platform continually refine its algorithms, ensuring that future explanations are even more helpful and tailored to individual users.
-
-Bridging Patients and Clinicians:
+3. Bridging Patients and Clinicians:
 Armed with a clearer understanding of his skin condition, Rohan can now engage in a more informed discussion with his healthcare provider. Clinicians, in turn, can use Skindom as a tool to explain complex skin issues to patients more effectively, enhancing communication and ensuring that patients take the right steps toward treatment.
 
-Impact:
+4. Impact:
 Skindom helps bridge the gap between patients and clinicians, fostering better communication, enhancing health literacy, and promoting timely and appropriate treatment. It empowers users to take control of their skin health, while also offering a community-driven resource that improves over time, benefiting both individuals and the broader public.
