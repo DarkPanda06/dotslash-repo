@@ -1,81 +1,28 @@
 # dotslash-repo
+Skindom 
 
-## Welcome to the dotslash Hackathon Repository! 🚀
+Skindom is a revolutionary platform designed to bridge the gap in medical knowledge for the common man. By leveraging advanced image recognition technology powered by deep learning, it provides quick, concise, and easy-to-understand explanations of skin conditions, identified through a simple picture upload. Skindom also offers personalized insights into potential causes and actionable recommendations, whether dietary adjustments, skincare tips, or medical treatments. To ensure accuracy and reliability, the platform incorporates feedback and expertise from dermatologists, patients, and researchers.
 
-### Instructions:
-- **Fork this repository**: Only one member from each team must fork this repository to their own GitHub account.
-- **Commit directly to your fork**: All submissions, code, and documentation must be committed to your fork. This repository will serve as your primary workspace during the hackathon.
+Problem Scenarios: 
 
-- [Rulebook and Sponsor Problem Statements](https://tanmayrainanda.craft.me/dotslash-info-repo)
----
+1. Rohan, a 14-year-old, noticed a new set of acne forming on his forehead. Having dealt with hormonal acne in the past, which was always bacterial, he typically managed it by cutting back on sugar. However, this time, the acne worsened despite his usual approach, and he was unsure of what to do. His family and friends were equally puzzled, and he didn’t think a visit to the dermatologist was necessary. What Rohan didn’t realize was that his acne was actually fungal, triggered by an antibiotic course he had taken the week before. Had he used ‘appname’, a simple photo could have quickly distinguished this from his usual bacterial acne, guiding him to the right solution: reducing oily foods. 
 
-## Requirements
+2. Sanya, a 30-year-old woman, notices an unusual mole on her back that has recently become larger, darker, and more irregular in shape. Despite her concern, she isn’t sure whether it’s simply a benign mole or something more serious. She spends hours researching online, but the information is overwhelming and conflicting. She feels uncertain about the next steps, and a visit to the dermatologist seems daunting due to time constraints.
 
-1. **Pitch Deck**  
-   - All submissions must include a **pitch deck** explaining your idea and its implementation.  
-   
-2. **Well-Commented Code**  
-   - Ensure that all code is well-documented with comments and follows standard coding practices.  
-   
-3. **Mid-Hack Folder**  
-   - Create a folder named `mid-hack` in your fork. This folder should contain all materials required for the **mid-hack submission**, including progress updates, initial implementation, and any supporting files.  
+What Sanya doesn't know is that the mole could be a sign of skin cancer, but without proper guidance, she risks delaying crucial treatment. If she had access to Skindom, a simple picture of the mole could have quickly identified the condition, explained the risks, and directed her to seek professional care promptly. With its AI-driven analysis and clear, reliable information, Skindom would have given her the clarity she needed to take immediate action.
 
-4. **Citation File**  
-   - Include a `citations.md` file in your repository. All external resources (e.g., articles, tutorials, code snippets) must be properly cited here. Failure to do so may result in your project being flagged for plagiarism.
+Solution with Skindom:
 
-5. **End-Hack Folder**  
-   - Create a folder named `end-hack` in your fork. This folder should contain all materials for the **final submission**, including the completed project, pitch deck, and any supplementary resources.
+Visual & Textual Explanation: Rohan uploads a picture of his acne to the Skindom platform. The deep learning AI scans the image and identifies the type of acne, providing an easy-to-understand explanation about the condition, including its likely cause (in this case, fungal acne triggered by an antibiotic course). The platform generates a detailed report, highlighting the possible triggers, severity, and recommended steps for treatment.
 
----
+Quality Check & Human Feedback: Before Rohan receives the explanation, the AI-generated report undergoes a quality check. The explanation is reviewed by a network of dermatologists and medical professionals who verify its accuracy. Any necessary adjustments or clarifications are made based on their feedback, ensuring the information is reliable.
 
-## Suggestions for Participants
+Knowledge Sharing & Contribution: After understanding his condition, Rohan decides to contribute to the platform. He participates by annotating images of his own skin condition, helping other users gain a better understanding of similar issues. By contributing, Rohan feels empowered, knowing his input helps improve the platform's accuracy for others.
 
-1. **Maintain Clean and Consistent Code**  
-   - Use comments and docstrings to document your code.  
-   - Follow a consistent naming convention for files, functions, and variables to improve readability.
+Rating Medical Explanations: Once Rohan has reviewed his personalized report, he provides feedback on its clarity, usefulness, and accuracy. His rating helps the platform continually refine its algorithms, ensuring that future explanations are even more helpful and tailored to individual users.
 
-2. **Commit Regularly**  
-   - Push commits frequently rather than submitting a single large commit at the end.  
-   - This practice not only showcases your progress but also helps in avoiding plagiarism issues.
+Bridging Patients and Clinicians:
+Armed with a clearer understanding of his skin condition, Rohan can now engage in a more informed discussion with his healthcare provider. Clinicians, in turn, can use Skindom as a tool to explain complex skin issues to patients more effectively, enhancing communication and ensuring that patients take the right steps toward treatment.
 
-3. **Version Control Best Practices**  
-   - Use branches for major features or experimental changes and merge them into the main branch after testing.  
-   - Write clear, concise commit messages for better traceability.
-
-4. **Utilize GitHub Issues and Pull Requests**  
-   - Track tasks and discussions using GitHub Issues.  
-   - Use Pull Requests (PRs) to review and merge changes within your team. This will help in maintaining a collaborative workflow.
-
----
-
-## Submission Guidelines
-
-- **Mid-Hack Checkpoint**  
-  Submit the contents of your `mid-hack` folder by the designated checkpoint time. This will include progress updates and preliminary work.
-
-- **Final Submission**  
-  Ensure that all files for your final project are stored in the `end-hack` folder. Your pitch deck and `citations.md` file must also be updated and included here.  
-
----
-
-## Resources
-
-1. **Git and GitHub Basics**  
-   - If you’re new to Git, check out these resources:  
-     - [Git Documentation](https://git-scm.com/doc)  
-     - [GitHub Guides](https://guides.github.com/)  
-
-2. **Project Ideas**  
-   - Explore hackathon project examples for inspiration:  
-     - [DevPost](https://devpost.com/)  
-     - [Awesome Hackathon Projects](https://github.com/daveverwer/awesome-hackathon-projects)  
-
----
-
-## Code of Conduct
-
-By participating in this hackathon, you agree to follow the event’s Code of Conduct. Be respectful, inclusive, and ensure a positive experience for all participants.  
-
-For any queries or support, feel free to contact the organizing team.  The full code of conduct can be found at [Fest Website](https://www.fitoorxprayas.in/rules)
-
-Happy hacking! 🎉
+Impact:
+Skindom helps bridge the gap between patients and clinicians, fostering better communication, enhancing health literacy, and promoting timely and appropriate treatment. It empowers users to take control of their skin health, while also offering a community-driven resource that improves over time, benefiting both individuals and the broader public.
