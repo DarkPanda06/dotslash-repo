@@ -1,0 +1,6 @@
+0 Oily Skin
+1 Dry Skin
+2 Acne
+3 Aging skin 
+4 Scarry Skin 
+5 Normal Skin
