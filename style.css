@@ -1,0 +1,134 @@
+/* Wasabi-themed minimal CSS styling for the provided HTML files */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5e0; /* Light wasabi background */
+    color: #4a4a2d; /* Dark wasabi green */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #7c8c42; /* Wasabi green */
+    text-align: center;
+    margin-top: 20px;
+}
+
+p, label, a {
+    color: #4a4a2d;
+}
+
+/* Links */
+a {
+    color: #7c8c42;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #7c8c42;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #6b7a3a;
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c2c29c;
+    border-radius: 5px;
+}
+
+/* Form Styling */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d3d3b3;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Video and Canvas Styling */
+video, canvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #c2c29c;
+    border-radius: 5px;
+}
+
+/* Message List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background-color: #e8e8cc;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+/* Container for Result */
+#result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Specific Page Styles */
+/* Dashboard Page */
+#uploadForm {
+    text-align: center;
+}
+
+/* Register and Login Pages */
+form a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #7c8c42;
+}
+form a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Specific Elements */
+#capture {
+    margin-top: 10px;
+}
+#submitButton {
+    margin-top: 20px;
+}
+
+/* Error and Success Messages */
+.flash-message {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.flash-message.error {
+    background-color: #e57373;
+    color: #ffffff;
+}
+.flash-message.success {
+    background-color: #81c784;
+    color: #ffffff;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ css_url }}">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background: #6c63ff;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+        }
+        .sidebar a:hover {
+            background: #575d63;
+        }
+        .container-content {
+            margin-left: 270px;
+        }
+        .menu-bar {
+            background: #343a40;
+            color: #ffffff;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3 class="text-white text-center">Menu</h3>
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="menu-bar">
+        <h4 class="text-center mb-0">Welcome to Skin Analysis Dashboard</h4>
+    </div>
+
+    <div class="container-content">
+        <div class="hero">
+            <h1>Skin Analysis and Recommendations</h1>
+            <p>Upload an image or use your camera to analyze your skin and get personalized recommendations.</p>
+        </div>
+
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Upload an Image or Use Your Camera</h2>
+
+            <div class="card shadow-sm p-4">
+                <form id="uploadForm" enctype="multipart/form-data" method="post">
+                    <div class="form-group">
+                        <label for="image">Choose an image to upload:</label>
+                        <input type="file" class="form-control-file" name="image" accept="image/*">
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <h3>Or use your camera:</h3>
+                        <div class="d-flex justify-content-center">
+                            <video id="camera" width="320" height="240" class="border rounded" autoplay></video>
+                        </div>
+                        <canvas id="snapshot" width="320" height="240" class="mt-3 d-none"></canvas>
+                        <button type="button" id="capture" class="btn btn-primary mt-3">Capture Photo</button>
+                        <input type="hidden" name="camera_image" id="camera_image">
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button type="submit" id="submitButton" class="btn btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="result" class="mt-5"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // JavaScript to access the camera and capture an image
+        const video = document.getElementById('camera');
+        const canvas = document.getElementById('snapshot');
+        const captureButton = document.getElementById('capture');
+        const cameraInput = document.getElementById('camera_image');
+        const resultDiv = document.getElementById('result');
+
+        // Access the user's camera
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then((stream) => {
+                video.srcObject = stream;
+            })
+            .catch((err) => {
+                console.error("Error accessing camera: ", err);
+            });
+
+        // Capture the image from the video stream
+        captureButton.addEventListener('click', () => {
+            const context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const dataURL = canvas.toDataURL('image/png');
+            cameraInput.value = dataURL;  // Store the image data URL in a hidden input field
+            canvas.classList.remove('d-none');
+        });
+
+        // Handle the response to display recommendations
+        document.getElementById('uploadForm').onsubmit = async function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const response = await fetch(window.location.pathname, {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            if (data.success) {
+                let recommendationsHtml = `<div class="card shadow-sm p-4">
+                                              <h3>Classification Result</h3>
+                                              <p><strong>Skin Type:</strong> ${data.result}</p>
+                                              <p><strong>Confidence Score:</strong> ${data.confidence}</p>`;
+                if (data.recommendations) {
+                    recommendationsHtml += `<h4>Recommendations for ${data.result}</h4>
+                                           <h5>Do:</h5><ul class="list-group mb-3">`;
+                    data.recommendations.do.forEach(item => {
+                        recommendationsHtml += `<li class="list-group-item list-group-item-success">${item}</li>`;
+                    });
+                    recommendationsHtml += `</ul><h5>Don't:</h5><ul class="list-group">`;
+                    data.recommendations.dont.forEach(item => {
+                        recommendationsHtml += `<li class="list-group-item list-group-item-danger">${item}</li>`;
+                    });
+                    recommendationsHtml += `</ul>`;
+                }
+                recommendationsHtml += `</div>`;
+                resultDiv.innerHTML = recommendationsHtml;
+            } else {
+                resultDiv.innerHTML = `<div class="alert alert-danger" role="alert">Error: ${data.error}</div>`;
+            }
+        }
+    </script>
+</body>
+</html>
