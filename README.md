@@ -1,3 +1,7 @@
+Kindly install any required dependencies
+Download the folder and while in the directory, run in the command line the following command
+```$python app.py```
+
 # dotslash-repo
 Skindom
 
