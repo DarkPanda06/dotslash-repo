@@ -1,4 +1,6 @@
-Kindly install any required dependencies
+Kindly install any required dependencies by downloading the ```requirements.txt``` file and running the following command 
+```pip install -r requirements.txt```
+
 Download the folder and while in the directory, run in the command line the following command
 ```$python app.py```
 
